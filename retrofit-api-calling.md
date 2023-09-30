@@ -8,6 +8,7 @@ implementation ("com.google.code.gson:gson:2.9.0")
 ```
 
 ### Create Retrofit Singleton
+
 ```sh
 object RetrofitClient {
 
@@ -23,18 +24,29 @@ object RetrofitClient {
     val apiService: ApiService by lazy {
         RetrofitClient.retrofit.create(ApiService::class.java)
     }
-
 }
 ```
 
-### Create an interface for calling API
+### Create interface for calling api
 
 ```sh
 
-@GET("get_all_todo.php")
-suspend fun getParticles(): JsonObject
+interface ApiService {
 
-@GET("shared_post.php?fromApp=true&id=:id")
-suspend fun getApiData(@Query("id") id: String): JsonObject
-
+    @GET("get_all_todo.php")
+    suspend fun getParticles(): JsonObject
+    
+    @FormUrlEncoded
+    @POST("url_segemnt.html")
+    suspend fun getApiRes(
+        @Field("id") lang: String,
+        @Field("code") code: Int
+    ): JsonObject
+        
+    @GET("shared_post.php?fromApp=true&id=:id")
+    suspend fun getApiData(@Query("id") id: String): JsonObject
+        
+}
 ```
+
+
