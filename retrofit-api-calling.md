@@ -37,13 +37,6 @@ GET, POST, PUT, PATCH, DELETE
 @GET("get_all_todo.php")
 suspend fun getParticles(): JsonObject
 
-@FormUrlEncoded
-    @POST("url_segemnt.html")
-    suspend fun getApiRes(
-    @Field("id") lang: String,
-    @Field("code") code: Int
-): JsonObject
-
 @GET("shared_post.php?fromApp=true&id=:id")
 suspend fun getApiData(@Query("id") id: String): JsonObject
 
