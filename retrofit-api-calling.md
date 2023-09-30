@@ -5,9 +5,9 @@
 ```sh
 implementation ("com.squareup.retrofit2:retrofit:2.9.0")
 implementation ("com.google.code.gson:gson:2.9.0")
+```
 
 ### Create Retrofit Singleton
-```
 ```sh
 object RetrofitClient {
 
