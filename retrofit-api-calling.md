@@ -27,10 +27,7 @@ object RetrofitClient {
 }
 ```
 
-### Create interface for calling api
-
-Call HTTP method as per requiremnets as needs
-GET, POST, PUT, PATCH, DELETE
+### Create an interface for calling API
 
 ```sh
 
