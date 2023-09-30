@@ -27,14 +27,14 @@ object RetrofitClient {
 }
 ```
 
-### Create interface for calling api
+### Create an interface for calling API
 
 ```sh
 
 interface ApiService {
 
     @GET("get_all_todo.php")
-    suspend fun getParticles(): JsonObject
+    suspend fun getData(): JsonObject
     
     @FormUrlEncoded
     @POST("url_segemnt.html")
