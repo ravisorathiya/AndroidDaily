@@ -7,8 +7,8 @@ implementation ("com.squareup.retrofit2:retrofit:2.9.0")
 implementation ("com.google.code.gson:gson:2.9.0")
 
 ### Create Retrofit Singleton
-
-sh
+```
+```sh
 object RetrofitClient {
 
     private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
@@ -25,13 +25,14 @@ object RetrofitClient {
     }
 
 }
+```
 
 ### Create interface for calling api
 
 Call HTTP method as per requiremnets as needs
 GET, POST, PUT, PATCH, DELETE
 
-sh
+```sh
 @FormUrlEncoded
 @POST("url_segemnt.html")
 suspend fun getApiRes(
