@@ -33,6 +33,10 @@ Call HTTP method as per requiremnets as needs
 GET, POST, PUT, PATCH, DELETE
 
 ```sh
+
+@GET("get_all_todo.php")
+suspend fun getParticles(): JsonObject
+
 @FormUrlEncoded
 @POST("url_segemnt.html")
 suspend fun getApiRes(
@@ -43,6 +47,4 @@ suspend fun getApiRes(
 @GET("shared_post.php?fromApp=true&id=:id")
 suspend fun getApiData(@Query("id") id: String): JsonObject
 
-@GET("get_all_todo.php")
-suspend fun getParticles(): JsonObject
 ```
